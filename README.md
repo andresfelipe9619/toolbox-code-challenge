@@ -2,31 +2,40 @@
 
 ## Commands
 
-- Run api app
+- Install API dependencies
 
 ```cmd
-./api/npm start
+cd ./api/
+npm install
+```
+
+- Run API tests
+
+```cmd
+cd ./api/
+npm run test
+```
+
+- Run API app
+
+```cmd
+cd ./api/
+npm start
 ```
 
 - Install client dependencies
 
 ```cmd
-./client/npm install
+cd ./client/
+npm install
 ```
 
 - Run client app
 
 ```cmd
+cd ./client/
 ./client/npm start
 ```
-
-- Run cypress tests
-
-```cmd
-cd ./cypress
-npm run cy:run
-```
-
 
 ## Running with Docker
 
