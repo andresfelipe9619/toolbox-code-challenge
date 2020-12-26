@@ -12,7 +12,7 @@ function App () {
     try {
       setLoading(true)
       const result = await isTextPalindrome(text)
-      setData(prev => [...prev, { ...result, input: text }])
+      setData(prev => [{ ...result, input: text }, ...prev])
     } catch (e) {
       console.error(e)
     } finally {
