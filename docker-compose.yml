@@ -1,0 +1,26 @@
+version: '2'
+services:
+  client:
+    build: ./client
+    restart: always
+    ports:
+      - '3000:3000'
+      - '35729:35729'
+    volumes:
+      - ./client:/client
+    links:
+      - server
+    networks:
+      - toolbox-network
+  server:
+    build: ./server
+    restart: always
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./server:/server
+    networks:
+      - toolbox-network
+networks:
+  toolbox-network:
+    driver: bridge
